@@ -1,6 +1,6 @@
 import axios from "axios"
 
-const baseUrl = "http://localhost:8080/usermembership"
+const baseUrl = `${import.meta.env.VITE_API_BASE_URL}/usermembership`
 
 export async function addNewUserMembership(userMemData) {
     try {
@@ -32,18 +32,6 @@ export async function showUserMembershipByumID(umId) {
     }
 }
 
-// export async function showAllUserMembership(){
-//         try{
-//             const response = await axios.get(`${baseUrl}/showall`);
-//             return response.data;
-//         }catch(error){
-//         console.log("error displaying user's membership", error.response?.data|| error.message);
-//         throw error;
-//     }
-// }
-
-
-
 export async function deleteUserMembershipByumID(umId) {
     try {
         const response = await axios.delete(`${baseUrl}/delete/${umId}`);
@@ -53,17 +41,6 @@ export async function deleteUserMembershipByumID(umId) {
         throw error;
     }
 }
-
-
-// export async function updateUserMembership(umId, tId, umData) {
-//     try {
-//         const response = await axios.put(`${baseUrl}/update/${umId}/${tId}`, umData);
-//         return response.data;
-//     } catch (error) {
-//         console.log("error updating user membership", error?.response?.data || error.message);
-//         throw error;
-//     }
-// }
 
 export async function countActiveMembers() {
     try {
