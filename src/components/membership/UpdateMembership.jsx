@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { getMemById, updateMembership } from '../../services/MemberShipService'
+import { getMemById, updateMembership } from '../../services/MembershipService'
 import { Form, Button, Row, Col } from 'react-bootstrap';
 
 export const UpdateMembership = ({mId}) => {
@@ -9,7 +9,6 @@ export const UpdateMembership = ({mId}) => {
         const loadMemData = async()=>{
              try{
                         const data = await getMemById(mId)
-                        // console.log(data);
                         setMemData(data);
                     }catch(error){
                         console.log(error)
