@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { listAllMembership } from '../../services/MemberShipService';
+import { listAllMembership } from '../../services/MembershipService';
 import { getAllUsers } from '../../services/UserService';
 import { addNewTrainer, findTrainer } from '../../services/TrainerService';
 import { Container, Card, Form, Button, Row, Col } from 'react-bootstrap';
@@ -18,8 +18,6 @@ export const AddTrainer = () => {
             const memResponse = await listAllMembership();
             const trainerResponse = await findTrainer()
             setUserData(userResponse);
-            // console.log(userResponse)
-            // console.log(memResponse)
             setMemData(memResponse);
             setExistingTrainer(trainerResponse);
         }
@@ -78,21 +76,16 @@ export const AddTrainer = () => {
                                 </Form.Group>
                             </Col>
                         </Row>
-
                         <Form.Group className="mb-3" controlId="expYears">
                             <Form.Label>Experience (Years)</Form.Label>
-                            <Form.Control type="number" name="expYears" value={trainerData.expYears} onChange={handleChange} placeholder="Enter experience in years" required min="0" />
+                            <Form.Control type="number" name="expYears" value={trainerData.expYears} onChange={handleChange} placeholder="Enter years of experience" required />
                         </Form.Group>
-
                         <Form.Group className="mb-3" controlId="bio">
                             <Form.Label>Bio</Form.Label>
-                            <Form.Control as="textarea" rows={4} name="bio" value={trainerData.bio} onChange={handleChange} placeholder="Enter trainer bio" required />
+                            <Form.Control as="textarea" rows={3} name="bio" value={trainerData.bio} onChange={handleChange} placeholder="Enter bio" />
                         </Form.Group>
-
-                        <div className="d-grid">
-                            <Button type="submit" style={{ backgroundColor: '#526302', borderColor: '#526302' }} size="lg">
-                                Submit
-                            </Button>
+                        <div className="text-center">
+                            <Button type="submit" style={{ backgroundColor: '#526302', borderColor: '#526302' }}>Add Trainer</Button>
                         </div>
                     </Form>
                 </Card.Body>
