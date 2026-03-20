@@ -22,7 +22,7 @@ export const AddUserMembership = () => {
     status: "",
   });
   const [price, setPrice] = useState(0);
-  const [error, setError] = useState(");
+  const [error, setError] = useState("");
   const [userSearch, setUserSearch] = useState("");
   const [memSearch, setMemSearch] = useState("");
   const [mail, setMail] = useState({to:"", subject:"", msg:""})
