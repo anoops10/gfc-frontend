@@ -9,7 +9,6 @@ export const UpdateMembership = ({mId}) => {
         const loadMemData = async()=>{
              try{
                         const data = await getMemById(mId)
-                        // console.log(data);
                         setMemData(data);
                     }catch(error){
                         console.log(error)

@@ -9,13 +9,11 @@ export const processPayment = async (price) => {
     }
 
     try {
-      const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:8080";
+      const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:8080";
 
       // 2. Create Order on your backend
       const { data: order } = await axios.post(`${API_BASE_URL}/createorder`, {
         amount: price,
-        // Optional: Send userId or membershipId to link the order in your DB
-        // userId: user?.id 
       });
 
       // 3. Configure Razorpay Options
@@ -40,13 +38,6 @@ export const processPayment = async (price) => {
             reject(new Error("Payment succeeded, but verification failed."));
           }
         },
-
-        // 5. Prefill user data
-        // prefill: {
-        //   name: user?.name || "",
-        //   email: user?.email || "",
-        //   contact: user?.phone || ""
-        // },
 
         theme: {
           color: "#3399cc"

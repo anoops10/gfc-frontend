@@ -1,7 +1,7 @@
 export * from './MembershipService';
 import axios from "axios";
 
-const baseUrl = "http://localhost:8080/membership"
+const baseUrl = `${import.meta.env.VITE_API_BASE_URL}/membership`
 
 export async function addNewMembership(mem) {
     try {
