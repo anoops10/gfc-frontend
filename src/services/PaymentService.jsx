@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseUrl = "http://localhost:8080/payment"
+const baseUrl = `${import.meta.env.VITE_API_BASE_URL}/payment`
 
 export async function showAllPayments(){
     try{

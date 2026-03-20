@@ -1,6 +1,6 @@
 import axios from "axios"
 
-const baseUrl = "http://localhost:8080/users"
+const baseUrl = `${import.meta.env.VITE_API_BASE_URL}/users`
 
 export async function getAllUsers() {
     try{    const response = await axios.get(`${baseUrl}/showalluser`)

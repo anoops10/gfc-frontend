@@ -7,6 +7,8 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import loginSideImage from '../../images/Gym2.jpg';
 
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+
 const LoginPage = () => {
   const [emailId, setEmailId] = useState('');
   const [password, setPassword] = useState('');
@@ -21,7 +23,7 @@ const LoginPage = () => {
 
     try {
       const response = await axios.post(
-        `http://localhost:8080/login`,
+        `${API_BASE_URL}/login`,
         null,
         {
           params: {

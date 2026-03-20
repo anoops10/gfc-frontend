@@ -5,6 +5,7 @@ import { Navbar, Nav, Container } from 'react-bootstrap';
 import axios from "axios";
 import logoImage from '../../images/logonobg.png';
 
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
 const Home = () => {
   // Simulate login state (replace with real auth logic as needed)
@@ -32,7 +33,7 @@ const Home = () => {
   const handleLogout = async () => {
     try {
       // Backend: destroy server session
-      await axios.post('http://localhost:8080/logout', {}, {
+      await axios.post(`${API_BASE_URL}/logout`, {}, {
         withCredentials: true  // sends JSESSIONID cookie
       });
     } catch (err) {
