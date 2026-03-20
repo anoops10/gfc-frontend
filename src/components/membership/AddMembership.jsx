@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { addNewMembership } from '../../services/MemberShipService';
+import { addNewMembership } from '../../services/MembershipService';
 import { Container, Card, Form, Button, Row, Col, Image } from 'react-bootstrap';
 import membershipBanner from '../../images/Untitleddesign.jpg';
 
