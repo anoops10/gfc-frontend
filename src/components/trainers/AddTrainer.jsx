@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { listAllMembership } from '../../services/MemberShipService';
+import { listAllMembership } from '../../services/MembershipService';
 import { getAllUsers } from '../../services/UserService';
 import { addNewTrainer, findTrainer } from '../../services/TrainerService';
 import { Container, Card, Form, Button, Row, Col } from 'react-bootstrap';

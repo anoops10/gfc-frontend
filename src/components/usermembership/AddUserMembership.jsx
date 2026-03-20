@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { getUserByEmailId, getAllUsers } from "../../services/UserService";
-import { listAllMembership } from "../../services/MemberShipService";
+import { listAllMembership } from "../../services/MembershipService";
 import { addNewUserMembership } from "../../services/UserMembershipService";
 import { Container, Card, Form, Button, Row, Col } from "react-bootstrap";
 import { processPayment } from "../../services/PaymentButtonService";

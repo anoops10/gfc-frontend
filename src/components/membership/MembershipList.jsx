@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { deleteMembership, listAllMembership } from '../../services/MemberShipService'
+import { deleteMembership, listAllMembership } from '../../services/MembershipService'
 import { UpdateMembership } from './UpdateMembership'
 import { Container, Table, Button, Card } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';

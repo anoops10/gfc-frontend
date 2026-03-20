@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { getMemById, updateMembership } from '../../services/MemberShipService'
+import { getMemById, updateMembership } from '../../services/MembershipService'
 import { Form, Button, Row, Col } from 'react-bootstrap';
 
 export const UpdateMembership = ({mId}) => {

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { findTrainerByUserId } from '../../services/TrainerService'
 import { Link, useParams } from 'react-router-dom'
-import { getMemById, listAllMembership } from '../../services/MemberShipService';
+import { getMemById, listAllMembership } from '../../services/MembershipService';
 import { findClientByTrainer } from '../../services/ClientService';
 import { ClientDetails } from '../clients/ClientDetails';
 import { UpdateClient } from '../clients/UpdateClient';

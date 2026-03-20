@@ -7,7 +7,7 @@ import { getImage, getUserByEmailId, getUserById } from "../../services/UserServ
 import {
   getMemById,
   listAllMembership,
-} from "../../services/MemberShipService";
+} from "../../services/MembershipService";
 import { AssignTrainer } from "../trainers/AssignTrainer";
 import { Container, Table, Button } from "react-bootstrap";
 import { findClientDataByUId } from "../../services/ClientService";
