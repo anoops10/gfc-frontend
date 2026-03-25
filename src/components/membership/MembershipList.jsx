@@ -31,12 +31,12 @@ export const MembershipList = () => {
     <Container className="my-5">
       <div className="d-flex justify-content-between align-items-center mb-4">
         <h2 className="text-uppercase fw-bold" style={{ color: '#526302' }}>Membership List</h2>
-        <Button 
+        {isAdmin && (<Button 
             style={{ backgroundColor: '#526302', borderColor: '#526302', color: 'white' }}
             onClick={() => navigate('/admin/addmembership')}
         >
             Add Membership
-        </Button>
+        </Button>)}
       </div>
       <div className="table-responsive shadow-sm rounded">
       <Table striped bordered hover className="mb-0">
